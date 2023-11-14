@@ -2,7 +2,7 @@
 {
     "headers": [
       {
-        "source": "/api/(.*)",
+        "source": "/index.js",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
