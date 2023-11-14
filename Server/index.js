@@ -8,7 +8,17 @@ const socket=require("socket.io")
 
 require("dotenv").config();
 
-app.use(cors());
+// app.use(cors());
+const options = [
+  cors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
+
+app.use(options);
 app.use(express.json());
 
 app.use("/api/auth",userRoutes)
