@@ -8,17 +8,8 @@ const socket=require("socket.io")
 
 require("dotenv").config();
 
-// app.use(cors());
-const options = [
-  cors({
-    origin: 'http://localhost:3000',
-    methods: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  })
-];
+app.use(cors());
 
-app.use(options);
 app.use(express.json());
 
 app.use("/api/auth",userRoutes)
