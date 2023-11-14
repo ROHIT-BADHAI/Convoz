@@ -61,7 +61,7 @@ function Login() {
     return true;
   };
   return loading ? (
-    <Loading/>
+    <Loading />
   ) : (
     <>
       <FormContainer>
