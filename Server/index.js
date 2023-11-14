@@ -25,7 +25,6 @@ const server = app.listen(process.env.PORT, () => {
 
 
 const io=socket(server)
-io.origins('*:*');
 global.onlineUsers=new Map();
 
 io.on("connection",(socket)=>{
