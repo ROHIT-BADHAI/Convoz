@@ -8,15 +8,9 @@ const socket=require("socket.io")
 
 require("dotenv").config();
 
-// app.use(cors());
-
+app.use(cors());
 app.use(express.json());
-app.use(cors({
-  origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-}));
+
 app.use("/api/auth",userRoutes)
 app.use("/api/messages",messagesRoutes)
 
@@ -30,7 +24,11 @@ const server = app.listen(process.env.PORT, () => {
 });
 
 
-const io=socket(server)
+const io=socket(server,{
+  cors:{
+    origin:"*",
+  }
+})
 global.onlineUsers=new Map();
 
 io.on("connection",(socket)=>{
