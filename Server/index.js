@@ -11,7 +11,7 @@ require("dotenv").config();
 // app.use(cors());
 const options = [
   cors({
-    origin: '*',
+    origin: 'http://localhost:3000',
     methods: '*',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
