@@ -1,4 +1,4 @@
-export const host="https://convoz.vercel.app/";
+export const host="http://localhost:5000";
 export const registerRoute=`${host}/api/auth/register`
 export const LoginRoute=`${host}/api/auth/login`
 export const setAvatarRoute=`${host}/api/auth/setAvatar`
