@@ -8,9 +8,6 @@ const userRoutes=require("./routes/userRoutes")
 const socket=require("socket.io")
 
 require("dotenv").config();
-app.use("/api/messages",cors())
-app.use("/api/auth",cors())
-
 app.use(express.json());
 
 app.use("/api/auth",userRoutes)
